@@ -183,18 +183,18 @@
       
       <div class="dropdown" id="langDropdown">
         <button class="dropdown-btn" onclick="toggleDropdown(event)">
-          <img id="currentFlag" class="flag-circle" src="https://flagcdn.com" alt="Flag">
+          <img id="currentFlag" class="flag-circle" src="https://flagcdn.com/w40/us.png" alt="Flag">
           <span id="currentLabel">English</span>
         </button>
         <div class="dropdown-content">
-          <button class="dropdown-item" onclick="setLanguage('en', 'English', 'https://flagcdn.com')">
-            <img class="flag-circle" src="https://flagcdn.com"> English
+          <button class="dropdown-item" onclick="setLanguage('en', 'English', 'https://flagcdn.com/w40/us.png')">
+            <img class="flag-circle" src="https://flagcdn.com/w40/us.png"> English
           </button>
-          <button class="dropdown-item" onclick="setLanguage('ja', '日本語', 'https://flagcdn.com')">
-            <img class="flag-circle" src="https://flagcdn.com"> 日本語
+          <button class="dropdown-item" onclick="setLanguage('ja', '日本語', 'https://flagcdn.com/w40/jp.png')">
+            <img class="flag-circle" src="https://flagcdn.com/w40/jp.png"> 日本語
           </button>
-          <button class="dropdown-item" onclick="setLanguage('es', 'Español', 'https://flagcdn.com')">
-            <img class="flag-circle" src="https://flagcdn.com"> Español
+          <button class="dropdown-item" onclick="setLanguage('es', 'Español', 'https://flagcdn.com/w40/pr.png')">
+            <img class="flag-circle" src="https://flagcdn.com/w40/pr.png"> Español
           </button>
         </div>
       </div>
@@ -278,7 +278,7 @@
         "pragmataDesc": "Unreal Engine 5 & C++ で開発された三人称視点シューティングの試作。カスタムGame Instance Subsystemによるハッキングのミニゲーム、データテーブルを活用したデータ駆動型設計、および高度なビヘイビアツリー敵AIを実装。",
         "coopDesc": "Steam Online Subsystemを利用した、UE5 & C++製のマルチプレイヤー協力型アドベンチャー。カスタムセッション管理システム、RPCアーキテクチャによる同期レプリケーション、サーバー同期型環境パズルを構築。",
         "loreTitle": "ストーリー…",
-        "loreBody": "2025年に第一世代（家族の中で最初）の大学卒業生として、ゲームデザインの確かなバックグラウンドを活かしてゲームプレイプログラミング of のフルタイムキャリアへと進みました。大阪のC&Rクリエイティブスタジオでゲームを開発するために日本へ移住したことは、私にとって素晴らしい大きな挑戦でした。Unreal Engine 5、Unity、C++、C#を自在に操り、クリエイティブなメカニクスを高度に最適化されたシステムへと落とし込んでいます。また、公式の「Women in Games Ambassador」としてコミュニティのインクルージョン向上にも深く注力しています。私がゲームを作るのは、人々に幸福を届けたいからです。文化を超えてプレイヤーの心に響く、記憶に残る瞬間や体験を生み出していきたいと考えています。業界の皆様との繋がりやコラボレーション、楽しい共創をいつでも楽しみにしています！"
+        "loreBody": "2025年に家族で初めて大学を卒業し、ゲームデザインで培った経験を活かしてゲームプレイプログラマーとしてのキャリアをスタートしました。大阪のC&Rクリエイティブスタジオでゲーム開発に携わるため日本へ移住したことは、私にとって大きな挑戦であり、かけがえのない経験となっています。現在はUnreal Engine 5、Unity、C++、C#を用いて、アイデアやゲームメカニクスを実際のプレイ体験へと落とし込み、実装しています。また、Women in Games Ambassadorとして、ゲーム業界における多様性とインクルージョンの推進にも積極的に取り組んでいます。私がゲームを作る理由は、人々に楽しさや感動を届けたいからです。文化や言語の壁を越えて、プレイヤーの心に残る体験を生み出せるよう日々挑戦を続けています。新しい出会いやコラボレーションの機会を楽しみにしています。"
       },
       "es": {
         "heroTitle": "¡hola, soy zoë!",
@@ -324,7 +324,7 @@
     document.addEventListener("DOMContentLoaded", () => {
       const savedLang = localStorage.getItem('userLang') || 'en';
       const savedLabel = localStorage.getItem('userLabel') || 'English';
-      const savedFlag = localStorage.getItem('userFlag') || 'https://flagcdn.com';
+      const savedFlag = localStorage.getItem('userFlag') || 'https://flagcdn.com/w40/us.png';
       setLanguage(savedLang, savedLabel, savedFlag);
     });
   </script>
