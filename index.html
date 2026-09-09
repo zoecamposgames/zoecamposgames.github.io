@@ -183,18 +183,18 @@
       
       <div class="dropdown" id="langDropdown">
         <button class="dropdown-btn" onclick="toggleDropdown(event)">
-          <img id="currentFlag" class="flag-circle" src="https://flagcdn.com/w40/us.png" alt="Flag">
+          <img id="currentFlag" class="flag-circle" src="https://flagcdn.com" alt="Flag">
           <span id="currentLabel">English</span>
         </button>
         <div class="dropdown-content">
-          <button class="dropdown-item" onclick="setLanguage('en', 'English', 'https://flagcdn.com/w40/us.png')">
-            <img class="flag-circle" src="https://flagcdn.com/w40/us.png"> English
+          <button class="dropdown-item" onclick="setLanguage('en', 'English', 'https://flagcdn.com')">
+            <img class="flag-circle" src="https://flagcdn.com"> English
           </button>
-          <button class="dropdown-item" onclick="setLanguage('ja', '日本語', 'https://flagcdn.com/w40/jp.png')">
-            <img class="flag-circle" src="https://flagcdn.com/w40/jp.png"> 日本語
+          <button class="dropdown-item" onclick="setLanguage('ja', '日本語', 'https://flagcdn.com')">
+            <img class="flag-circle" src="https://flagcdn.com"> 日本語
           </button>
-          <button class="dropdown-item" onclick="setLanguage('es', 'Español', 'https://flagcdn.com/w40/es.png')">
-            <img class="flag-circle" src="https://flagcdn.com/w40/es.png"> Español
+          <button class="dropdown-item" onclick="setLanguage('es', 'Español', 'https://flagcdn.com')">
+            <img class="flag-circle" src="https://flagcdn.com"> Español
           </button>
         </div>
       </div>
@@ -209,22 +209,39 @@
 
     <section id="projects">
       <div class="grid">
+        <!-- Triage Card -->
         <div class="card">
           <img src="assets/triage.jpg" alt="Triage">
           <h3>Triage</h3>
           <p id="triage-desc"></p>
         </div>
 
+        <!-- Queen Bee Card -->
         <div class="card">
           <img src="assets/queenbee.jpg" alt="Queen Bee">
           <h3>Queen Bee</h3>
           <p id="queenbee-desc"></p>
         </div>
 
+        <!-- Golfin Card -->
         <div class="card">
           <img src="assets/golfin.jpg" alt="Golfin">
           <h3>Golfin</h3>
           <p id="golfin-desc"></p>
+        </div>
+
+        <!-- Pragmata Card -->
+        <div class="card">
+          <img src="assets/pragmata.jpg" alt="Pragmata Prototype">
+          <h3>Pragmata Prototype</h3>
+          <p id="pragmata-desc"></p>
+        </div>
+
+        <!-- Co-op Adventure Card -->
+        <div class="card">
+          <img src="assets/coop.jpg" alt="Co-op Adventure Game">
+          <h3>Co-op Adventure</h3>
+          <p id="coop-desc"></p>
         </div>
       </div>
     </section>
@@ -238,7 +255,7 @@
       </div>
     </div>
   </section>
-
+  
   <script>
     const translations = {
       "en": {
@@ -247,6 +264,8 @@
         "triageDesc": "Built in Unreal Engine 5 and released on Steam. Diagnose symptoms and make life-or-death decisions in an afflicted town.",
         "queenbeeDesc": "Developed in Unity 3D. A whimsical platformer built by a team of six developers where you control a swarm of bees.",
         "golfinDesc": "Built in Unity 3D during my internship in Kyoto, Japan. Touched both the physics backbone and UI/UX implementation.",
+        "pragmataDesc": "Unreal Engine 5 & C++ third-person shooter prototype. Features a custom Game Instance Subsystem hacking grid minigame, data-driven architecture via Data Tables, and advanced Behavior Tree enemy AI.",
+        "coopDesc": "Multiplayer adventure game engineered in UE5 & C++ utilizing the Steam Online Subsystem. Features custom Multiplayer Sessions, RPC architecture replication, and server-synchronized environmental puzzles.",
         "loreTitle": "my lore…",
         "loreBody": "I graduated in 2025 as a proud first-generation college graduate, turning my deep background in game design into a full-time career in gameplay programming. Moving to Japan to engineer games at C&R Creative Studios in Osaka has been an incredible leap of faith. I work dynamically within Unreal Engine 5, Unity, C++, and C# to transform artistic mechanics into highly optimized systems. As an official Women in Games Ambassador, I focus heavily on uplift and inclusion. I make games because I want to bring happiness to people—creating memorable moment-to-moment experiences that deeply connect with players across cultures. Always happy to connect, collaborate, and learn!"
       },
@@ -256,8 +275,10 @@
         "triageDesc": "Unreal Engine 5で開発され、Steamでリリース。病に侵された町で症状を診断し、生と死の決断を下します。",
         "queenbeeDesc": "Unity 3Dで開発。6人の開発者チームで制作された、蜂の群れを操作して進むポップな3Dアクションゲーム。",
         "golfinDesc": "京都でのインターンシップ中にUnity 3Dで制作したモバイルゴルフゲーム。物理挙動の基礎からUI/UXの実装まで担当。",
+        "pragmataDesc": "Unreal Engine 5 & C++ で開発された三人称視点シューティングの試作。カスタムGame Instance Subsystemによるハッキングのミニゲーム、データテーブルを活用したデータ駆動型設計、および高度なビヘイビアツリー敵AIを実装。",
+        "coopDesc": "Steam Online Subsystemを利用した、UE5 & C++製のマルチプレイヤー協力型アドベンチャー。カスタムセッション管理システム、RPCアーキテクチャによる同期レプリケーション、サーバー同期型環境パズルを構築。",
         "loreTitle": "ストーリー…",
-        "loreBody": "2025年に第一世代（家族の中で最初）の大学卒業生として、ゲームデザインの確かなバックグラウンドを活かしてゲームプレイプログラミングのフルタイムキャリアへと進みました。大阪のC&Rクリエイティブスタジオでゲームを開発するために日本へ移住したことは、私にとって素晴らしい大きな挑戦でした。Unreal Engine 5、Unity、C++、C#を自在に操り、クリエイティブなメカニクスを高度に最適化されたシステムへと落とし込んでいます。また、公式の「Women in Games Ambassador」としてコミュニティのインクルージョン向上にも深く注力しています。私がゲームを作るのは、人々に幸福を届けたいからです。文化を超えてプレイヤーの心に響く、記憶に残る瞬間や体験を生み出していきたいと考えています。業界の皆様との繋がりやコラボレーション、楽しい共創をいつでも楽しみにしています！"
+        "loreBody": "2025年に第一世代（家族の中で最初）の大学卒業生として、ゲームデザインの確かなバックグラウンドを活かしてゲームプレイプログラミング of のフルタイムキャリアへと進みました。大阪のC&Rクリエイティブスタジオでゲームを開発するために日本へ移住したことは、私にとって素晴らしい大きな挑戦でした。Unreal Engine 5、Unity、C++、C#を自在に操り、クリエイティブなメカニクスを高度に最適化されたシステムへと落とし込んでいます。また、公式の「Women in Games Ambassador」としてコミュニティのインクルージョン向上にも深く注力しています。私がゲームを作るのは、人々に幸福を届けたいからです。文化を超えてプレイヤーの心に響く、記憶に残る瞬間や体験を生み出していきたいと考えています。業界の皆様との繋がりやコラボレーション、楽しい共創をいつでも楽しみにしています！"
       },
       "es": {
         "heroTitle": "¡hola, soy zoë!",
@@ -265,8 +286,10 @@
         "triageDesc": "Desarrollado en Unreal Engine 5 y lanzado en Steam. Diagnostica síntomas y toma decisiones de vida o muerte.",
         "queenbeeDesc": "Desarrollado en Unity 3D. Un alegre juego de plataformas en 3D creado por un equipo de seis desarrolladores.",
         "golfinDesc": "Creado en Unity 3D durante mi pasantía en Kioto, Japón. Trabajé tanto en las mecánicas físicas como en el UI/UX.",
+        "pragmataDesc": "Prototipo de shooter en tercera persona en Unreal Engine 5 y C++. Cuenta con un minijuego de hackeo basado en un Game Instance Subsystem personalizado, arquitectura de datos mediante Data Tables e IA de enemigos con Behavior Trees.",
+        "coopDesc": "Juego de aventura multijugador cooperativo desarrollado en UE5 y C++ utilizando Steam Online Subsystem. Implementa un subsistema personalizado de sesiones multijugador, replicación mediante arquitectura RPC y acertijos ambientales sincronizados con el servidor.",
         "loreTitle": "mi historia…",
-        "loreBody": "Me gradué en 2025 como una orgullosa universitaria de primera generación, transformando mis profundas raíces en el diseño de videojuegos en una carrera de tiempo completo en programación de gameplay. Mudarme a Japón para desarrollar juegos en C&R Creative Studios en Osaka ha sido un viaje increíble. Trabajo de manera dinámica con Unreal Engine 5, Unity, C++ y C# para transformar mecánicas creativas en sistemas altamente optimizados. Como Embajadora oficial de Women in Games, me enfoco profundamente en la inclusión comunitaria. Hago juegos porque quiero traer felicidad a las personas, creando momentos memorables y experiencias significativas que conecten con los jugadores a través de las culturas. ¡Siempre feliz de conectar, colaborar y aprender de los demás!"
+        "loreBody": "Me gradué en 2025 como una orgullosa universitaria de primera generación, transformando mis profundas raíces en el diseño de videojuegos en una carrera de tiempo completo en programación de gameplay. Mudarme a Japón para desarrollar juegos en C&R Creative Studios en Osaka han sido un viaje increíble. Trabajo de manera dinámica con Unreal Engine 5, Unity, C++ y C# para transformar mecánicas creativas en sistemas altamente optimizados. Como Embajadora oficial de Women in Games, me enfoco profundamente en la inclusión comunitaria. Hago juegos porque quiero traer felicidad a las personas, creando momentos memorables y experiencias significativas que conecten con los jugadores a través de las culturas. ¡Siempre feliz de conectar, colaborar y aprender de los demás!"
       }
     };
 
@@ -283,6 +306,8 @@
       document.getElementById('triage-desc').innerText = translations[lang].triageDesc;
       document.getElementById('queenbee-desc').innerText = translations[lang].queenbeeDesc;
       document.getElementById('golfin-desc').innerText = translations[lang].golfinDesc;
+      document.getElementById('pragmata-desc').innerText = translations[lang].pragmataDesc;
+      document.getElementById('coop-desc').innerText = translations[lang].coopDesc;
       document.getElementById('lore-title').innerText = translations[lang].loreTitle;
       document.getElementById('lore-body').innerText = translations[lang].loreBody;
       
@@ -299,7 +324,7 @@
     document.addEventListener("DOMContentLoaded", () => {
       const savedLang = localStorage.getItem('userLang') || 'en';
       const savedLabel = localStorage.getItem('userLabel') || 'English';
-      const savedFlag = localStorage.getItem('userFlag') || 'https://flagcdn.com/w40/us.png';
+      const savedFlag = localStorage.getItem('userFlag') || 'https://flagcdn.com';
       setLanguage(savedLang, savedLabel, savedFlag);
     });
   </script>
