@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Zoë Marie Campos ₊ ⊹</title>
+  <style>
+    :root {
+      --bg-color: #faf8f5;     /* Warm, minimal cream backdrop */
+      --text-color: #2b2b2b;
+      --accent-color: #bfa3ff;   /* Pastel purple accent */
+      --card-bg: #ffffff;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 4rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 100;
+    }
+
+    .logo {
+      font-weight: 500;
+      letter-spacing: 0.1em;
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-color);
+      font-size: 0.95rem;
+      letter-spacing: 0.05em;
+      margin-left: 1.5rem;
+      opacity: 0.7;
+    }
+
+    /* Top Right Flag Dropdown */
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-btn {
+      background: white;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 20px;
+      padding: 6px 14px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .flag-circle {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: calc(100% + 8px);
+      background-color: white;
+      min-width: 140px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      border-radius: 12px;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .dropdown.open .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-item {
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .dropdown-item:hover {
+      background-color: #f7f5f9;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    h1 {
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: lowercase;
+      font-size: 2.5rem;
+    }
+
+    .hero-sub {
+      font-size: 1.2rem;
+      color: #555;
+      line-height: 1.6;
+      max-width: 700px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 3rem;
+      margin-top: 4rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid rgba(0,0,0,0.04);
+      border-radius: 20px;
+      padding: 1.25rem;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 14px;
+      background-color: #eee;
+    }
+
+    .lore-section {
+      background-color: white;
+      padding: 6rem 2rem;
+      margin-top: 8rem;
+    }
+
+    .lore-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .lang-en, .lang-ja, .lang-es {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">zoë marie campos ✿</div>
+    <div class="nav-container">
+      <nav class="nav-links">
+        <a href="#projects">projects</a>
+        <a href="#lore">lore</a>
+      </nav>
+      
+      <div class="dropdown" id="langDropdown">
+        <button class="dropdown-btn" onclick="toggleDropdown(event)">
+          <img id="currentFlag" class="flag-circle" src="https://flagcdn.com" alt="Flag">
+          <span id="currentLabel">English</span>
+        </button>
+        <div class="dropdown-content">
+          <button class="dropdown-item" onclick="setLanguage('en', 'English', 'https://flagcdn.com')">
+            <img class="flag-circle" src="https://flagcdn.com"> English
+          </button>
+          <button class="dropdown-item" onclick="setLanguage('ja', '日本語', 'https://flagcdn.com')">
+            <img class="flag-circle" src="https://flagcdn.com"> 日本語
+          </button>
+          <button class="dropdown-item" onclick="setLanguage('es', 'Español', 'https://flagcdn.com')">
+            <img class="flag-circle" src="https://flagcdn.com"> Español
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h1 class="lang-en">Hi, I'm Zoë!</h1>
+      <h1 class="lang-ja">こんにちは、ゾーイです！</h1>
+      <h1 class="lang-es">¡Hola, soy Zoë!</h1>
+
+      <p class="hero-sub lang-en">I am currently a Gameplay Programmer at C&R Creative Studios in Osaka, Japan. Coming from a game design background, I combine creativity and technology to build engaging player experiences using Unreal Engine 5 and Unity.</p>
+      <p class="hero-sub lang-ja">現在、大阪のC&Rクリエイティブスタジオでゲームプレイプログラマーをしています。ゲームデザインの経験を活かし、クリエイティビティと技術を融合させ、Unreal Engine 5やUnityで魅力的な体験を開発しています。</p>
+      <p class="hero-sub lang-es">Actualmente soy Programadora de Gameplay en C&R Creative Studios en Osaka, Japón. Viniendo de un trasfondo en diseño de videojuegos, combino la creatividad y la tecnología con Unreal Engine 5 y Unity.</p>
+    </section>
+
+    <section id="projects">
+      <div class="grid">
+        <!-- Triage Card -->
+        <div class="card">
+          <img src="assets/triage.jpg" alt="Triage">
+          <h3>Triage</h3>
+          <p class="lang-en">Built in Unreal Engine 5 and released on Steam. Diagnose symptoms and make life-or-death decisions in an afflicted town.</p>
+          <p class="lang-ja">Unreal Engine 5で開発され、Steamでリリース。病に侵された町で症状を診断し、生と死の決断を下します。</p>
+          <p class="lang-es">Desarrollado en Unreal Engine 5 y lanzado en Steam. Diagnostica síntomas y toma decisiones de vida o muerte.</p>
+        </div>
+
+        <!-- Queen Bee Card -->
+        <div class="card">
+          <img src="assets/queenbee.jpg" alt="Queen Bee">
+          <h3>Queen Bee</h3>
+          <p class="lang-en">Developed in Unity 3D. A whimsical platformer built by a team of six developers where you control a swarm of bees.</p>
+          <p class="lang-ja">Unity 3Dで開発。6人の開発者チームで制作された、蜂の群れを操作して進むポップな3Dアクションゲーム。</p>
+          <p class="lang-es">Desarrollado en Unity 3D. Un alegre juego de plataformas en 3D creado por un equipo de seis desarrolladores.</p>
+        </div>
+
+        <!-- Golfin Card -->
+        <div class="card">
+          <img src="assets/golfin.jpg" alt="Golfin">
+          <h3>Golfin</h3>
+          <p class="lang-en">Built in Unity 3D during my internship in Kyoto, Japan. Touched both the physics backbone and UI/UX implementation.</p>
+          <p class="lang-ja">京都でのインターンシップ中にUnity 3Dで制作したモバイルゴルフゲーム。物理挙動の基礎からUI/UXの実装まで担当。</p>
+          <p class="lang-es">Creado en Unity 3D durante mi pasantía en Kioto, Japón. Trabajé tanto en las mecánicas físicas como en el UI/UX.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="lore-section" id="lore">
+    <div class="lore-container">
+      <h2 class="lang-en">my lore…</h2>
+      <h2 class="lang-ja">ストーリー…</h2>
+      <h2 class="lang-es">mi historia…</h2>
+      
+      <div class="hero-sub">
+        <p class="lang-en">Whether I'm crafting engaging game systems or relaunching the Women in Games Club on my college campus to amplify underrepresented voices, my approach is rooted in empathy, resilience, and teamwork.</p>
+        <p class="lang-ja">ゲームシステム構築でも、キャンパス内で「Women in Games Club」を立ち上げて多様な声を届ける活動でも、私の軸は共感、回復力、そしてチームワークにあります。</p>
+        <p class="lang-es">Ya sea creando sistemas de juego atractivos o relanzando el Club Women in Games en mi campus universitario, mi enfoque está arraigado en la empatía y el trabajo en equipo.</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function toggleDropdown(e) {
+      e.stopPropagation();
+      document.getElementById('langDropdown').classList.toggle('open');
+    }
+
+    function setLanguage(lang, label, flagUrl) {
+      document.getElementById('currentLabel').innerText = label;
+      document.getElementById('currentFlag').src = flagUrl;
+      
+      document.querySelectorAll('.lang-en, .lang-ja, .lang-es').forEach(el => el.style.display = 'none');
+      document.querySelectorAll('.lang-' + lang).forEach(el => el.style.display = 'block');
+      
+      localStorage.setItem('userLang', lang);
+      localStorage.setItem('userLabel', label);
+      localStorage.setItem('userFlag', flagUrl);
+      document.getElementById('langDropdown').classList.remove('open');
+    }
+
+    window.addEventListener('click', () => {
+      document.getElementById('langDropdown').classList.remove('open');
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const savedLang = localStorage.getItem('userLang') || 'en';
+      const savedLabel = localStorage.getItem('userLabel') || 'English';
+      const savedFlag = localStorage.getItem('userFlag') || 'https://flagcdn.com';
+      setLanguage(savedLang, savedLabel, savedFlag);
+    });
+  </script>
+</body>
+</html>
