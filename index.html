@@ -183,62 +183,48 @@
       
       <div class="dropdown" id="langDropdown">
         <button class="dropdown-btn" onclick="toggleDropdown(event)">
-          <img id="currentFlag" class="flag-circle" src="https://flagcdn.com" alt="Flag">
+          <img id="currentFlag" class="flag-circle" src="https://flagcdn.com/w40/us.png" alt="Flag">
           <span id="currentLabel">English</span>
         </button>
         <div class="dropdown-content">
-          <button class="dropdown-item" onclick="setLanguage('en', 'English', 'https://flagcdn.com')">
-            <img class="flag-circle" src="https://flagcdn.com"> English
+          <button class="dropdown-item" onclick="setLanguage('en', 'English', 'https://flagcdn.com/w40/us.png')">
+            <img class="flag-circle" src="https://flagcdn.com/w40/us.png"> English
           </button>
-          <button class="dropdown-item" onclick="setLanguage('ja', '日本語', 'https://flagcdn.com')">
-            <img class="flag-circle" src="https://flagcdn.com"> 日本語
+          <button class="dropdown-item" onclick="setLanguage('ja', '日本語', 'https://flagcdn.com/w40/jp.png')">
+            <img class="flag-circle" src="https://flagcdn.com/w40/jp.png"> 日本語
           </button>
-          <button class="dropdown-item" onclick="setLanguage('es', 'Español', 'https://flagcdn.com')">
-            <img class="flag-circle" src="https://flagcdn.com"> Español
+          <button class="dropdown-item" onclick="setLanguage('es', 'Español', 'https://flagcdn.com/w40/es.png')">
+            <img class="flag-circle" src="https://flagcdn.com/w40/es.png"> Español
           </button>
         </div>
       </div>
     </div>
   </header>
 
-  <main>
+   <main>
     <section>
-      <h1 class="lang-en">Hi, I'm Zoë!</h1>
-      <h1 class="lang-ja">こんにちは、ゾーイです！</h1>
-      <h1 class="lang-es">¡Hola, soy Zoë!</h1>
-
-      <p class="hero-sub lang-en">I am currently a Gameplay Programmer at C&R Creative Studios in Osaka, Japan. Coming from a game design background, I combine creativity and technology to build engaging player experiences using Unreal Engine 5 and Unity.</p>
-      <p class="hero-sub lang-ja">現在、大阪のC&Rクリエイティブスタジオでゲームプレイプログラマーをしています。ゲームデザインの経験を活かし、クリエイティビティと技術を融合させ、Unreal Engine 5やUnityで魅力的な体験を開発しています。</p>
-      <p class="hero-sub lang-es">Actualmente soy Programadora de Gameplay en C&R Creative Studios en Osaka, Japón. Viniendo de un trasfondo en diseño de videojuegos, combino la creatividad y la tecnología con Unreal Engine 5 y Unity.</p>
+      <h1 id="hero-title"></h1>
+      <p class="hero-sub" id="hero-bio"></p>
     </section>
 
     <section id="projects">
       <div class="grid">
-        <!-- Triage Card -->
         <div class="card">
           <img src="assets/triage.jpg" alt="Triage">
           <h3>Triage</h3>
-          <p class="lang-en">Built in Unreal Engine 5 and released on Steam. Diagnose symptoms and make life-or-death decisions in an afflicted town.</p>
-          <p class="lang-ja">Unreal Engine 5で開発され、Steamでリリース。病に侵された町で症状を診断し、生と死の決断を下します。</p>
-          <p class="lang-es">Desarrollado en Unreal Engine 5 y lanzado en Steam. Diagnostica síntomas y toma decisiones de vida o muerte.</p>
+          <p id="triage-desc"></p>
         </div>
 
-        <!-- Queen Bee Card -->
         <div class="card">
           <img src="assets/queenbee.jpg" alt="Queen Bee">
           <h3>Queen Bee</h3>
-          <p class="lang-en">Developed in Unity 3D. A whimsical platformer built by a team of six developers where you control a swarm of bees.</p>
-          <p class="lang-ja">Unity 3Dで開発。6人の開発者チームで制作された、蜂の群れを操作して進むポップな3Dアクションゲーム。</p>
-          <p class="lang-es">Desarrollado en Unity 3D. Un alegre juego de plataformas en 3D creado por un equipo de seis desarrolladores.</p>
+          <p id="queenbee-desc"></p>
         </div>
 
-        <!-- Golfin Card -->
         <div class="card">
           <img src="assets/golfin.jpg" alt="Golfin">
           <h3>Golfin</h3>
-          <p class="lang-en">Built in Unity 3D during my internship in Kyoto, Japan. Touched both the physics backbone and UI/UX implementation.</p>
-          <p class="lang-ja">京都でのインターンシップ中にUnity 3Dで制作したモバイルゴルフゲーム。物理挙動の基礎からUI/UXの実装まで担当。</p>
-          <p class="lang-es">Creado en Unity 3D durante mi pasantía en Kioto, Japón. Trabajé tanto en las mecánicas físicas como en el UI/UX.</p>
+          <p id="golfin-desc"></p>
         </div>
       </div>
     </section>
@@ -246,19 +232,44 @@
 
   <section class="lore-section" id="lore">
     <div class="lore-container">
-      <h2 class="lang-en">my lore…</h2>
-      <h2 class="lang-ja">ストーリー…</h2>
-      <h2 class="lang-es">mi historia…</h2>
-      
-    <div class="hero-sub">
-        <p class="lang-en">I graduated in 2025 as a proud first-generation college graduate, turning my deep background in game design into a full-time career in gameplay programming. Moving to Japan to engineer games at C&R Creative Studios in Osaka has been an incredible leap of faith. I work dynamically within Unreal Engine 5, Unity, C++, and C# to transform artistic mechanics into highly optimized systems. As an official Women in Games Ambassador, I focus heavily on uplift and inclusion. I make games because I want to bring happiness to people—creating memorable moment-to-moment experiences that deeply connect with players across cultures. Always happy to connect, collaborate, and learn!</p>
-        <p class="lang-ja">2025年に第一世代（家族の中で最初）の大学卒業生として、ゲームデザインの確かなバックグラウンドを活かしてゲームプレイプログラミングのフルタイムキャリアへと進みました。大阪のC&Rクリエイティブスタジオでゲームを開発するために日本へ移住したことは、私にとって素晴らしい大きな挑戦でした。Unreal Engine 5、Unity、C++、C#を自在に操り、クリエイティブなメカニクスを高度に最適化されたシステムへと落とし込んでいます。また、公式の「Women in Games Ambassador」としてコミュニティのインクルージョン向上にも深く注力しています。私がゲームを作るのは、人々に幸福を届けたいからです。文化を超えてプレイヤーの心に響く、記憶に残る瞬間や体験を生み出していきたいと考えています。業界の皆様との繋がりやコラボレーション、そして共に学べる機会をいつでも楽しみにしています！</p>
-        <p class="lang-es">Me gradué en 2025 como una orgullosa universitaria de primera generación, transformando mis profundas raíces en el diseño de videojuegos en una carrera de tiempo completo en programación de gameplay. Mudarme a Japón para desarrollar juegos en C&R Creative Studios en Osaka ha sido un viaje increíble. Trabajo de manera dinámica con Unreal Engine 5, Unity, C++ y C# para transformar mecánicas creativas en sistemas altamente optimizados. Como Embajadora oficial de Women in Games, me enfoco profundamente en la inclusión comunitaria. Hago juegos porque quiero traer felicidad a las personas, creando momentos memorables y experiencias significativas que conecten con los jugadores a través de las culturas. ¡Siempre feliz de conectar, colaborar y aprender de los demás!</p>
+      <h2 id="lore-title"></h2>
+      <div class="hero-sub">
+        <p id="lore-body"></p>
       </div>
     </div>
   </section>
 
   <script>
+    const translations = {
+      "en": {
+        "heroTitle": "hi, i'm zoë!",
+        "heroBio": "I am currently a Gameplay Programmer at C&R Creative Studios in Osaka, Japan. Coming from a game design background, I combine creativity and technology to build engaging player experiences using Unreal Engine 5 and Unity.",
+        "triageDesc": "Built in Unreal Engine 5 and released on Steam. Diagnose symptoms and make life-or-death decisions in an afflicted town.",
+        "queenbeeDesc": "Developed in Unity 3D. A whimsical platformer built by a team of six developers where you control a swarm of bees.",
+        "golfinDesc": "Built in Unity 3D during my internship in Kyoto, Japan. Touched both the physics backbone and UI/UX implementation.",
+        "loreTitle": "my lore…",
+        "loreBody": "I graduated in 2025 as a proud first-generation college graduate, turning my deep background in game design into a full-time career in gameplay programming. Moving to Japan to engineer games at C&R Creative Studios in Osaka has been an incredible leap of faith. I work dynamically within Unreal Engine 5, Unity, C++, and C# to transform artistic mechanics into highly optimized systems. As an official Women in Games Ambassador, I focus heavily on uplift and inclusion. I make games because I want to bring happiness to people—creating memorable moment-to-moment experiences that deeply connect with players across cultures. Always happy to connect, collaborate, and learn!"
+      },
+      "ja": {
+        "heroTitle": "こんにちは、ゾーイです！",
+        "heroBio": "現在、大阪のC&Rクリエイティブスタジオでゲームプレイプログラマーをしています。ゲームデザインの経験を活かし、クリエイティビティと技術を融合させ、Unreal Engine 5やUnityで魅力的な体験を開発しています。",
+        "triageDesc": "Unreal Engine 5で開発され、Steamでリリース。病に侵された町で症状を診断し、生と死の決断を下します。",
+        "queenbeeDesc": "Unity 3Dで開発。6人の開発者チームで制作された、蜂の群れを操作して進むポップな3Dアクションゲーム。",
+        "golfinDesc": "京都でのインターンシップ中にUnity 3Dで制作したモバイルゴルフゲーム。物理挙動の基礎からUI/UXの実装まで担当。",
+        "loreTitle": "ストーリー…",
+        "loreBody": "2025年に第一世代（家族の中で最初）の大学卒業生として、ゲームデザインの確かなバックグラウンドを活かしてゲームプレイプログラミングのフルタイムキャリアへと進みました。大阪のC&Rクリエイティブスタジオでゲームを開発するために日本へ移住したことは、私にとって素晴らしい大きな挑戦でした。Unreal Engine 5、Unity、C++、C#を自在に操り、クリエイティブなメカニクスを高度に最適化されたシステムへと落とし込んでいます。また、公式の「Women in Games Ambassador」としてコミュニティのインクルージョン向上にも深く注力しています。私がゲームを作るのは、人々に幸福を届けたいからです。文化を超えてプレイヤーの心に響く、記憶に残る瞬間や体験を生み出していきたいと考えています。業界の皆様との繋がりやコラボレーション、楽しい共創をいつでも楽しみにしています！"
+      },
+      "es": {
+        "heroTitle": "¡hola, soy zoë!",
+        "heroBio": "Actualmente soy Programadora de Gameplay en C&R Creative Studios en Osaka, Japón. Viniendo de un trasfondo en diseño de videojuegos, combino la creatividad y la tecnología con Unreal Engine 5 y Unity.",
+        "triageDesc": "Desarrollado en Unreal Engine 5 y lanzado en Steam. Diagnostica síntomas y toma decisiones de vida o muerte.",
+        "queenbeeDesc": "Desarrollado en Unity 3D. Un alegre juego de plataformas en 3D creado por un equipo de seis desarrolladores.",
+        "golfinDesc": "Creado en Unity 3D durante mi pasantía en Kioto, Japón. Trabajé tanto en las mecánicas físicas como en el UI/UX.",
+        "loreTitle": "mi historia…",
+        "loreBody": "Me gradué en 2025 como una orgullosa universitaria de primera generación, transformando mis profundas raíces en el diseño de videojuegos en una carrera de tiempo completo en programación de gameplay. Mudarme a Japón para desarrollar juegos en C&R Creative Studios en Osaka ha sido un viaje increíble. Trabajo de manera dinámica con Unreal Engine 5, Unity, C++ y C# para transformar mecánicas creativas en sistemas altamente optimizados. Como Embajadora oficial de Women in Games, me enfoco profundamente en la inclusión comunitaria. Hago juegos porque quiero traer felicidad a las personas, creando momentos memorables y experiencias significativas que conecten con los jugadores a través de las culturas. ¡Siempre feliz de conectar, colaborar y aprender de los demás!"
+      }
+    };
+
     function toggleDropdown(e) {
       e.stopPropagation();
       document.getElementById('langDropdown').classList.toggle('open');
@@ -267,24 +278,28 @@
     function setLanguage(lang, label, flagUrl) {
       document.getElementById('currentLabel').innerText = label;
       document.getElementById('currentFlag').src = flagUrl;
-      
-      document.querySelectorAll('.lang-en, .lang-ja, .lang-es').forEach(el => el.style.display = 'none');
-      document.querySelectorAll('.lang-' + lang).forEach(el => el.style.display = 'block');
+      document.getElementById('hero-title').innerText = translations[lang].heroTitle;
+      document.getElementById('hero-bio').innerText = translations[lang].heroBio;
+      document.getElementById('triage-desc').innerText = translations[lang].triageDesc;
+      document.getElementById('queenbee-desc').innerText = translations[lang].queenbeeDesc;
+      document.getElementById('golfin-desc').innerText = translations[lang].golfinDesc;
+      document.getElementById('lore-title').innerText = translations[lang].loreTitle;
+      document.getElementById('lore-body').innerText = translations[lang].loreBody;
       
       localStorage.setItem('userLang', lang);
       localStorage.setItem('userLabel', label);
       localStorage.setItem('userFlag', flagUrl);
       document.getElementById('langDropdown').classList.remove('open');
     }
-
+    
     window.addEventListener('click', () => {
       document.getElementById('langDropdown').classList.remove('open');
     });
-
+    
     document.addEventListener("DOMContentLoaded", () => {
       const savedLang = localStorage.getItem('userLang') || 'en';
       const savedLabel = localStorage.getItem('userLabel') || 'English';
-      const savedFlag = localStorage.getItem('userFlag') || 'https://flagcdn.com';
+      const savedFlag = localStorage.getItem('userFlag') || 'https://flagcdn.com/w40/us.png';
       setLanguage(savedLang, savedLabel, savedFlag);
     });
   </script>
