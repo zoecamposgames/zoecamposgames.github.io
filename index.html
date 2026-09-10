@@ -102,6 +102,7 @@
       width: 100%;
       text-align: left;
       cursor: pointer;
+      white-space: nowrap;
     }
 
     .dropdown-item:hover {
@@ -168,6 +169,22 @@
 
     .lang-en, .lang-ja, .lang-es {
       display: none;
+    }
+
+    /* Responsive overrides for smaller phone screen layouts */
+    @media (max-width: 768px) {
+      header {
+        padding: 1.5rem 2rem;       /* Clean up wide header gaps on small viewports */
+      }
+      
+      h1 {
+        font-size: 1.8rem;          /* Scales down title size so Japanese line stays flat */
+        letter-spacing: 0.08em;     /* Tightens the wide kerning slightly for phone displays */
+      }
+      
+      .hero-sub {
+        font-size: 1.05rem;         /* Comfortably scales down your bio descriptions */
+      }
     }
   </style>
 </head>
