@@ -103,6 +103,8 @@
       text-align: left;
       cursor: pointer;
       white-space: nowrap;
+      flex-shrink: 0;
+      min-width: 120px;
     }
 
     .dropdown-item:hover {
@@ -178,12 +180,13 @@
       }
       
       h1 {
-        font-size: 1.8rem;          /* Scales down title size so Japanese line stays flat */
-        letter-spacing: 0.08em;     /* Tightens the wide kerning slightly for phone displays */
+        font-size: 1.6rem !important;          /* Scales down massive header text rules completely */
+        letter-spacing: 0.05em;     /* Tightens the wide kerning slightly for phone displays */
+        line-height: 1.3;
       }
       
       .hero-sub {
-        font-size: 1.05rem;         /* Comfortably scales down your bio descriptions */
+        font-size: 1rem;         /* Scales down copy content descriptions for readability */
       }
     }
   </style>
