@@ -276,6 +276,52 @@
       </div>
     </div>
   </section>
+
+  <section class="contact-section" id="contact">
+      <h2 id="contact-title" style="margin-bottom: 2rem;"></h2>
+      
+      <div class="contact-layout">
+        <!-- Left Column: Profile Card -->
+        <div class="contact-card-profile">
+          <img src="assets/profile.jpg" class="contact-avatar" alt="Zoë Marie Campos">
+          <div class="profile-details">
+            <div class="profile-name">Zoë Marie Campos</div>
+            <div class="profile-name-ja">カンポス ゾーイ マリー</div>
+            <div class="profile-loc">📍 Osaka, Japan</div>
+            <a href="mailto:zoe.campos.games@gmail.com" class="profile-email">zoe.campos.games@gmail.com</a>
+          </div>
+        </div>
+        
+        <!-- Right Column: Interactive Buttons & Featured Articles -->
+        <div class="contact-content-block">
+          <h3 style="font-weight: 500; font-size: 1.4rem; margin: 0 0 1.5rem 0;">Let's Collaborate!</h3>
+          
+          <div class="contact-links-stack">
+            <a href="assets/resume.pdf" download class="btn-contact-action" id="res-btn-txt">📄 View Resume</a>
+            <a href="https://linkedin.com" target="_blank" class="btn-contact-action">🗲 Connect on LinkedIn</a>
+          </div>
+  
+          <!-- Featured Articles List -->
+          <h3 id="press-heading-text" style="font-weight: 500; font-size: 1.1rem; margin-top: 3.5rem; border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 0.5rem;"></h3>
+          <div class="press-list">
+            <a href="https://champlain.edu" target="_blank" class="press-item">
+              <div>
+                <div class="press-meta">Champlain College Spotlight</div>
+                <div class="press-title">A Space in Game Design: Q&A with Zoë Campos</div>
+              </div>
+              <div class="press-arrow">⟶</div>
+            </a>
+            <a href="https://pcgamer.com" target="_blank" class="press-item">
+              <div>
+                <div class="press-meta">PC Gamer Editorial</div>
+                <div class="press-title">Five New Steam Games You Probably Missed (Features: Triage)</div>
+              </div>
+              <div class="press-arrow">⟶</div>
+            </a>
+          </div>
+        </div>
+      </div>
+  </section>
   
   <script>
     const translations = {
@@ -289,6 +335,9 @@
         "coopDesc": "Multiplayer adventure game engineered in UE5 & C++ utilizing the Steam Online Subsystem. Features custom Multiplayer Sessions, RPC architecture replication, and server-synchronized environmental puzzles.",
         "loreTitle": "my lore…",
         "loreBody": "I graduated in 2025 as a proud first-generation college graduate, turning my deep background in game design into a full-time career in gameplay programming. Moving to Japan to engineer games at C&R Creative Studios in Osaka has been an incredible leap of faith. I work dynamically within Unreal Engine 5, Unity, C++, and C# to transform artistic mechanics into highly optimized systems. As an official Women in Games Ambassador, I focus heavily on uplift and inclusion. I make games because I want to bring happiness to people—creating memorable moment-to-moment experiences that deeply connect with players across cultures. Always happy to connect, collaborate, and learn!"
+        "contactTitle": "contact info",
+        "resBtn": "View Resume (.pdf)",
+        "pressHead": "Featured Articles & Press"    
       },
       "ja": {
         "heroTitle": "こんにちは、ゾーイです！",
@@ -300,6 +349,9 @@
         "coopDesc": "Steam Online Subsystemを利用した、UE5 & C++製のマルチプレイヤー協力型アドベンチャー。カスタムセッション管理システム、RPCアーキテクチャによる同期レプリケーション、サーバー同期型環境パズルを構築。",
         "loreTitle": "ストーリー…",
         "loreBody": "2025年に家族で初めて大学を卒業し、ゲームデザインで培った経験を活かしてゲームプレイプログラマーとしてのキャリアをスタートしました。大阪のC&Rクリエイティブスタジオでゲーム開発に携わるため日本へ移住したことは、私にとって大きな挑戦であり、かけがえのない経験となっています。現在はUnreal Engine 5、Unity、C++、C#を用いて、アイデアやゲームメカニクスを実際のプレイ体験へと落とし込み、実装しています。また、Women in Games Ambassadorとして、ゲーム業界における多様性とインクルージョンの推進にも積極的に取り組んでいます。私がゲームを作る理由は、人々に楽しさや感動を届けたいからです。文化や言語の壁を越えて、プレイヤーの心に残る体験を生み出せるよう日々挑戦を続けています。新しい出会いやコラボレーションの機会を楽しみにしています。"
+        "contactTitle": "連絡先情報",
+        "resBtn": "履歴書を表示 (.pdf)",
+        "pressHead": "メディア掲載・記事"
       },
       "es": {
         "heroTitle": "¡hola, soy zoë!",
@@ -311,6 +363,10 @@
         "coopDesc": "Juego de aventura multijugador cooperativo desarrollado en UE5 y C++ utilizando Steam Online Subsystem. Implementa un subsistema personalizado de sesiones multijugador, replicación mediante arquitectura RPC y acertijos ambientales sincronizados con el servidor.",
         "loreTitle": "mi historia…",
         "loreBody": "Me gradué en 2025 como una orgullosa universitaria de primera generación, transformando mis profundas raíces en el diseño de videojuegos en una carrera de tiempo completo en programación de gameplay. Mudarme a Japón para desarrollar juegos en C&R Creative Studios en Osaka han sido un viaje increíble. Trabajo de manera dinámica con Unreal Engine 5, Unity, C++ y C# para transformar mecánicas creativas en sistemas altamente optimizados. Como Embajadora oficial de Women in Games, me enfoco profundamente en la inclusión comunitaria. Hago juegos porque quiero traer felicidad a las personas, creando momentos memorables y experiencias significativas que conecten con los jugadores a través de las culturas. ¡Siempre feliz de conectar, colaborar y aprender de los demás!"
+        "contactTitle": "información de contacto",
+        "resBtn": "Ver Currículum (.pdf)",
+        "pressHead": "Artículos Destacados y Prensa"
+
       }
     };
 
@@ -331,6 +387,9 @@
       document.getElementById('coop-desc').innerText = translations[lang].coopDesc;
       document.getElementById('lore-title').innerText = translations[lang].loreTitle;
       document.getElementById('lore-body').innerText = translations[lang].loreBody;
+      document.getElementById('contact-title').innerText = translations[lang].contactTitle;
+      document.getElementById('res-btn-txt').innerText = translations[lang].resBtn;
+      document.getElementById('press-heading-text').innerText = translations[lang].pressHead;
       
       localStorage.setItem('userLang', lang);
       localStorage.setItem('userLabel', label);
