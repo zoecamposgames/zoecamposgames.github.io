@@ -230,6 +230,8 @@
     </section>
 
     <section id="projects">
+      <h2 id="gallery-title" style="margin-top: 4rem; font-size: 1.8rem; font-weight: 400; letter-spacing: 0.12em; text-transform: lowercase;"></h2>
+      
       <div class="grid">
         <!-- Triage Card -->
         <div class="card">
@@ -281,6 +283,9 @@
   <script>
     const translations = {
       "en": {
+        "navProjects": "projects",
+        "navContact": "contact me",
+        "galleryTitle": "projects",
         "heroTitle": "hi, i'm zoë!",
         "heroBio": "I am currently a Gameplay Programmer at C&R Creative Studios in Osaka, Japan. Coming from a game design background, I combine creativity and technology to build engaging player experiences using Unreal Engine 5 and Unity.",
         "triageDesc": "Built in Unreal Engine 5 and released on Steam. Diagnose symptoms and make life-or-death decisions in an afflicted town.",
@@ -295,6 +300,9 @@
         "pressHead": "Featured Articles & Press"    
       },
       "ja": {
+        "navProjects": "プロジェクト",
+        "navContact": "連絡先",
+        "galleryTitle": "プロジェクト一覧",
         "heroTitle": "こんにちは、ゾーイです！",
         "heroBio": "現在、大阪のC&Rクリエイティブスタジオでゲームプレイプログラマーをしています。ゲームデザインの経験を活かし、クリエイティビティと技術を融合させ、Unreal Engine 5やUnityで魅力的な体験を開発しています。",
         "triageDesc": "Unreal Engine 5で開発され、Steamでリリース。病に侵された町で症状を診断し、生と死の決断を下します。",
@@ -309,6 +317,9 @@
         "pressHead": "メディア掲載・記事"
       },
       "es": {
+        "navProjects": "proyectos",
+        "navContact": "contacto",
+        "galleryTitle": "proyectos",
         "heroTitle": "¡hola, soy zoë!",
         "heroBio": "Actualmente soy Programadora de Gameplay en C&R Creative Studios en Osaka, Japón. Viniendo de un trasfondo en diseño de videojuegos, combino la creatividad y la tecnología con Unreal Engine 5 y Unity.",
         "triageDesc": "Desarrollado en Unreal Engine 5 y lanzado en Steam. Diagnostica síntomas y toma decisiones de vida o muerte.",
@@ -333,6 +344,9 @@
     function setLanguage(lang, label, flagUrl) {
       document.getElementById('currentLabel').innerText = label;
       document.getElementById('currentFlag').src = flagUrl;
+      document.getElementById('nav-projects').innerText = translations[lang].navProjects;
+      document.getElementById('nav-contact').innerText = translations[lang].navContact;
+      document.getElementById('gallery-title').innerText = translations[lang].galleryTitle;
       document.getElementById('hero-title').innerText = translations[lang].heroTitle;
       document.getElementById('hero-bio').innerText = translations[lang].heroBio;
       document.getElementById('triage-desc').innerText = translations[lang].triageDesc;
