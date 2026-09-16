@@ -198,9 +198,8 @@
     <div class="logo">zoë marie campos ✿</div>
     <div class="nav-container">
       <nav class="nav-links">
-        <a href="#projects">projects</a>
-        <a href="#lore">lore</a>
-        <a href="contact.html">contact me</a>
+        <a href="index.html" id="nav-projects">projects</a>
+        <a href="contact.html" id="nav-contact">contact me</a>
       </nav>
       
       <div class="dropdown" id="langDropdown">
@@ -354,11 +353,6 @@
       document.getElementById('golfin-desc').innerText = translations[lang].golfinDesc;
       document.getElementById('pragmata-desc').innerText = translations[lang].pragmataDesc;
       document.getElementById('coop-desc').innerText = translations[lang].coopDesc;
-      document.getElementById('lore-title').innerText = translations[lang].loreTitle;
-      document.getElementById('lore-body').innerText = translations[lang].loreBody;
-      document.getElementById('contact-title').innerText = translations[lang].contactTitle;
-      document.getElementById('res-btn-txt').innerText = translations[lang].resBtn;
-      document.getElementById('press-heading-text').innerText = translations[lang].pressHead;
       
       localStorage.setItem('userLang', lang);
       localStorage.setItem('userLabel', label);
