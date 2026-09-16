@@ -352,19 +352,34 @@
   <script>
     const translations = {
       "en": {
+        "navProjects": "projects",
+        "navContact": "contact me",
         "contactTitle": "Let's Collaborate!",
-        "resBtn": "📄 View Resume",
-        "pressHead": "Featured Articles & Press"
+        "loreBody": "I graduated in 2025 as a proud first-generation college graduate, turning my deep background in game design into a full-time career in gameplay programming. Moving to Japan to engineer games at C&R Creative Studios in Osaka has been an incredible leap of faith. I work dynamically within Unreal Engine 5, Unity, C++, and C# to transform artistic mechanics into highly optimized systems. As an official Women in Games Ambassador, I focus heavily on uplift and inclusion. I make games because I want to bring happiness to people—creating memorable moment-to-moment experiences that deeply connect with players across cultures. Always happy to connect, collaborate, and learn!",
+        "resBtn": "View Resume",
+        "linkedinBtn": "🗲 Connect on LinkedIn",
+        "pressHead": "Featured Articles & Press",
+        "readMore": "read article ⟶"
       },
       "ja": {
+        "navProjects": "プロジェクト",
+        "navContact": "連絡先",
         "contactTitle": "お気軽にご連絡ください！",
-        "resBtn": "📄 履歴書を表示",
-        "pressHead": "メディア掲載・記事"
+        "loreBody": "2025年に第一世代（家族の中で最初）の大学卒業生として、ゲームデザインの確かなバックグラウンドを活かしてゲームプレイプログラミングのフルタイムキャリアへと進みました。大阪のC&Rクリエイティブスタジオでゲームを開発するために日本へ移住したことは、私にとって素晴らしい大きな挑戦でした。Unreal Engine 5、Unity、C++、C#を自在に操り、クリエイティブなメカニクスを高度に最適化されたシステムへと落とし込んでいます。また、公式の「Women in Games Ambassador」としてコミュニティのインクルージョン向上にも深く注力しています。私がゲームを作るのは、人々に幸福を届けたいからです。文化を超えてプレイヤーの心に響く、記憶に残る瞬間や体験を生み出していきたいと考えています。業界の皆様との繋がりやコラボレーション、楽しい共創をいつでも楽しみにしています！",
+        "resBtn": "履歴書を表示",
+        "linkedinBtn": "🗲 LinkedInで繋がる",
+        "pressHead": "メディア掲載・記事",
+        "readMore": "記事を読む ⟶"
       },
       "es": {
+        "navProjects": "proyectos",
+        "navContact": "contacto",
         "contactTitle": "¡Colaboremos!",
-        "resBtn": "📄 Ver Currículum",
-        "pressHead": "Artículos Destacados y Prensa"
+        "loreBody": "Me gradué en 2025 como una orgullosa universitaria de primera generación, transformando mis profundas raíces en el diseño de videojuegos en una carrera de tiempo completo en programación de gameplay. Mudarme a Japón para desarrollar juegos en C&R Creative Studios en Osaka han sido un viaje increíble. Trabajo de manera dinámica con Unreal Engine 5, Unity, C++ y C# para transformar mecánicas creativas en sistemas altamente optimizados. Como Embajadora oficial de Women in Games, me enfoco profundamente en la inclusión comunitaria. Hago juegos porque quiero traer felicidad a las personas, creando momentos memorables y experiencias significativas que conecten con los jugadores a través de las culturas. ¡Siempre feliz de conectar, volver a colaborar y aprender de los demás!",
+        "resBtn": "Ver Currículum",
+        "linkedinBtn": "🗲 Conectar en LinkedIn",
+        "pressHead": "Artículos Destacados y Prensa",
+        "readMore": "leer artículo ⟶"
       }
     };
 
@@ -376,9 +391,18 @@
     function setLanguage(lang, label, flagUrl) {
       document.getElementById('currentLabel').innerText = label;
       document.getElementById('currentFlag').src = flagUrl;
+
+      document.getElementById('nav-projects').innerText = translations[lang].navProjects;
+      document.getElementById('nav-contact').innerText = translations[lang].navContact;
+      
       document.getElementById('contact-title').innerText = translations[lang].contactTitle;
+      document.getElementById('lore-body').innerText = translations[lang].loreBody;
       document.getElementById('res-btn-txt').innerText = translations[lang].resBtn;
+      document.getElementById('linkedin-btn-txt').innerText = translations[lang].linkedinBtn;
       document.getElementById('press-heading-text').innerText = translations[lang].pressHead;
+
+      document.getElementById('press-read-1').innerText = translations[lang].readMore;
+      document.getElementById('press-read-2').innerText = translations[lang].readMore;
       
       localStorage.setItem('userLang', lang);
       localStorage.setItem('userLabel', label);
@@ -393,7 +417,7 @@
     document.addEventListener("DOMContentLoaded", () => {
       const savedLang = localStorage.getItem('userLang') || 'en';
       const savedLabel = localStorage.getItem('userLabel') || 'English';
-      const savedFlag = localStorage.getItem('userFlag') || 'https://flagcdn.com';
+      const savedFlag = localStorage.getItem('userFlag') || 'https://flagcdn.com/w40/us.png';
       setLanguage(savedLang, savedLabel, savedFlag);
     });
   </script>
