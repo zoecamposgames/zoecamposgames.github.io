@@ -113,7 +113,7 @@
           <a href="https://champlain.edu" target="_blank" class="card">
             <div>
               <div class="press-meta">Champlain College Spotlight</div>
-              <h3>A Space in Game Design: Q&A with Zoë Campos</h3>
+              <h3 id="art-champlain-title"></h3>
             </div>
             <div class="press-footer" id="press-read-1">read article ⟶</div>
           </a>
@@ -122,7 +122,7 @@
           <a href="https://pcgamer.com" target="_blank" class="card">
             <div>
               <div class="press-meta">PC Gamer Editorial</div>
-              <h3>Five New Steam Games You Probably Missed (Features: Triage)</h3>
+              <h3 id="art-pcgamer-title"></h3>
             </div>
             <div class="press-footer" id="press-read-2">read article ⟶</div>
           </a>
@@ -141,6 +141,8 @@
         "resBtn": "📄 View Resume",
         "linkedinBtn": "🗲 Connect on LinkedIn",
         "pressHead": "Featured Articles & Press",
+        "artChamplain": "A Space in Game Design: Q&A with Zoë Campos",
+        "artPcgamer": "Five New Steam Games You Probably Missed (Features: Triage)",
         "readMore": "read article ⟶"
       },
       "ja": {
@@ -151,6 +153,8 @@
         "resBtn": "📄 履歴書を表示",
         "linkedinBtn": "🗲 LinkedInで繋がる",
         "pressHead": "メディア掲載・記事",
+        "artChamplain": "ゲームデザインにおける私の居場所：学生ゾーイ・カンポスとのQ&A",
+        "artPcgamer": "見逃しているかもしれない5つの新作Steamゲーム（掲載：トリアージ）",
         "readMore": "記事を読む ⟶"
       },
       "es": {
@@ -161,6 +165,8 @@
         "resBtn": "📄 Ver Currículum",
         "linkedinBtn": "🗲 Conectar en LinkedIn",
         "pressHead": "Artículos Destacados y Prensa",
+        "artChamplain": "Un Espacio en el Diseño de Juegos: Preguntas y Respuestas con Zoë Campos",
+        "artPcgamer": "Cinco Nuevos Juegos de Steam que Probablemente te Perdiste (Presenta: Triage)",
         "readMore": "leer artículo ⟶"
       }
     };
@@ -188,6 +194,14 @@
       // Responsive Grid Box Card Footers
       document.getElementById('press-read-1').innerText = translations[lang].readMore;
       document.getElementById('press-read-2').innerText = translations[lang].readMore;
+
+      // Dynamic Press Card Button Footers
+      document.getElementById('press-read-1').innerText = translations[lang].readMore;
+      document.getElementById('press-read-2').innerText = translations[lang].readMore;
+      
+      // Paste these two new rows right here:
+      document.getElementById('art-champlain-title').innerText = translations[lang].artChamplain;
+      document.getElementById('art-pcgamer-title').innerText = translations[lang].artPcgamer;
       
       localStorage.setItem('userLang', lang);
       localStorage.setItem('userLabel', label);
